@@ -1,15 +1,14 @@
 pipeline {
   agent any
-  stages {
-    stage('build') {
-      steps {
-        echo "this is build stage"
+  stages{
+    stage('test') {
+      steps{
+        echo "this is test"
       }
     }
-    stage('git clone') {
-      steps {
-        git branch: 'main', url: 'https://github.com/harsha7979/demo1.git'
-      }
+    stage('clone') {
+      steps{
+        git branch: 'yashvi', url: 'https://github.com/yashu1506/demo1.git'
     }
   }
 }
